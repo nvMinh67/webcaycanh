@@ -1,0 +1,1 @@
+<h4>{{number_format($total_price2)}}   VND</h4>
