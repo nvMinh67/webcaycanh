@@ -17,11 +17,7 @@ use App\Models\orders;
 use Illuminate\Support\Str;
 use App\Models\User;
 use Illuminate\Support\Facades\DB;
-
-
-
-
-
+use Mail;
 
 
 class AdminController extends Controller
@@ -521,10 +517,26 @@ $room->image=$target_file;
      $new_amount =  $each->product->amount - $amount;
      $sql = products::where('id',$id_product)
      ->update(['amount'=> $new_amount]);
-
     }
 
   }
+  $order = order_product::where('id_order',$id)->first();
+
+  $order_id = $order->id_order;
+  $order_user = orders::find($order_id);
+  $email = $order_user->email;
+
+  $name = "TREE SHOP";
+  $data = array("name"=>"TREE SHOP", "body" => "Chào mừng bạn đến với TREE SHOP!", "email" => $email); //body of mail.blade.php
+                Mail::send('layout.mails.mail-register', $data, function($message) use ($name, $email) {
+                    $message->to($email, $name)
+                        ->subject('Thông tin mua hàng tại TREE SHOP');
+                    $message->from($email,$name);//send from this mail
+                });
+
+
+
+ 
   return response()->json([
     'status' => 200,
   ]);

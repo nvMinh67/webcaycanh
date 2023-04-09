@@ -11,7 +11,7 @@ class contacts extends Model
      /**
      * Database table name
      */
-    protected $table = 'contacts';
+    protected $table = 'contact';
 
     /**
      * Use timestamps 

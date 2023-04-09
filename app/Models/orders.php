@@ -14,7 +14,7 @@ class orders extends Model
      *
      * @var string
      */
-    protected $table = 'orders';
+    protected $table = 'order';
      /**
      * Sử dụng các thuộc tính created_at và updated_at trong bảng
      *

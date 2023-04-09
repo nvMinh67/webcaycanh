@@ -153,7 +153,7 @@
           <div class="col-lg-3 col-md-6 col-6">
             <div class="itemlist">
               <div class="item-img">
-                <a href="{{route('home.detail', ['i' => $pro->product->id,'slug'=>$pro->product->slug ]) }}">  <img src="{{$pro->product->image}}"
+                <a href="{{route('home.detail', ['id' => $pro->product->id,'slug'=>$pro->product->slug ]) }}">  <img src="{{$pro->product->image}}"
                  alt="" class="item-picture"></a>
              
                  <span class="new-tag">NEW</span>
@@ -194,7 +194,7 @@
           <div class="col-lg-3 col-md-6 col-6">
             <div class="itemlist">
               <div class="item-img">
-                <a href="{{route('home.detail', ['i' => $pro->product->id,'slug'=>$pro->product->slug ]) }}">
+                <a href="{{route('home.detail', ['id' => $pro->product->id,'slug'=>$pro->product->slug ]) }}">
                   <img src="{{$pro->product->image}}"alt="" class="item-picture">
 
                 </a>
@@ -499,7 +499,7 @@
           <div class="col-lg-3 col-md-6 col-6">
             <div class="itemlist">
               <div class="item-img">
-                  <a href="{{url('/home/detail',['name' => $pro->name])}}">
+                  <a href="{{route('home.detail', ['id' => $pro->id])}}">
 
                     <img src="{{ $pro->image}}" alt="" class="item-picture">
                   </a>

@@ -602,7 +602,6 @@
 
 })
  </script>
-      
       @include('layout.layouts.footer')
       
 

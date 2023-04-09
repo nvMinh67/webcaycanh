@@ -30,11 +30,12 @@ class ProductController extends Controller
         return view('layout.cart.success');
     }
     public function detail  ( request $request){
-        $id_product = $request->i; 
+      
+        $id_product = $request->id; 
         $pro = products::find($id_product);
         $id_product = $request->i; 
         $product = products::where('id','!=',$id_product)->paginate(4);
-
+   
         return view('layout.product.add-product',compact('pro','product'));
     }
     public function product ( ){
@@ -333,7 +334,7 @@ class ProductController extends Controller
                  }
                 Cart::destroy();
           
-                return redirect()->intended('/')->with('success','your order had been store!');
+                return redirect()->route('home')->with('success','your order had been store!');
                  break;
                  case "1" :
                      $total_price = 0;

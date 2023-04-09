@@ -133,6 +133,7 @@
     // Route::get('/product', '\App\Controllers\HomeController@product');
     Route::get('/home/product', [ProductController::class, 'product'])->name('home.product');
     Route::get('home/detail', [ProductController::class, 'detail'])->name('home.detail');
+
     Route::get('/add-cart-ajax', [ProductController::class, 'addajax'])->name('.add-cart-ajax');
     Route::get('/addtocartH', [ProductController::class, 'addtocartH'])->name('.addtocartH');
     Route::get('/home/shopping', [ProductController::class, 'shopping'])->name('home.shopping');

@@ -157,7 +157,7 @@
                      </i>Add-To-Cart</button>
                   </div>
                   <div class="col-lg-6">
-                  <button class="align-items-center btn-add btn btn-buy1 btn-primary" onclick="location.href='http://localhost:8080/home/shopping'" type="button">
+                  <button class="align-items-center btn-add btn btn-buy1 btn-primary" onclick="location.href='http://localhost:8000/home/shopping'" type="button">
                   <i class="icon-cart fa-solid fa-cart-shopping"></i>Watch-Cart</button>
                   </div>
 

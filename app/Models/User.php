@@ -14,7 +14,7 @@ class User extends Authenticatable
   /**
   * Database table name
   */
-  protected $table = 'user';
+  protected $table = 'users';
     /**
      * The attributes that are mass assignable.
      *
